@@ -1,8 +1,4 @@
--- import nvim-tree plugin safely
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
+local nvimtree = require'nvim-tree'
 
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
