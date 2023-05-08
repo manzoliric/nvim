@@ -4,6 +4,15 @@ return require('packer').startup(function(use)
 
   -- Plugins
   use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-lua/plenary.nvim'
+  use 'nvim-tree/nvim-web-devicons'
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+			require'alpha'.setup(require'alpha.themes.startify'.config)
+		end
+  }
 
   -- apparence
   use 'marko-cerovac/material.nvim'
@@ -12,6 +21,15 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+	-- lint
+	use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+
   -- IA
-  use("github/copilot.vim")
+  use 'github/copilot.vim'
 end)
