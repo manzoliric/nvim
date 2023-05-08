@@ -1,4 +1,5 @@
-local opt = vim.opt -- for conciseness
+local opt = vim.opt
+local g = vim.g
 
 -- line numbers
 opt.number = true
@@ -6,30 +7,10 @@ opt.number = true
 -- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true
 opt.autoindent = true
 
--- line wrapping
-opt.wrap = false
-
--- search settings
-opt.ignorecase = true
-opt.smartcase = true
+-- appearance
+g.material_style = "deep ocean"
 
 -- cursor line
 opt.cursorline = true
-
--- appearance
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-
--- backspace
-opt.backspace = "indent,eol,start"
-
--- clipboard
-opt.clipboard:append("unnamedplus")
-
-opt.iskeyword:append("-")
-
-
