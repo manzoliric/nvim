@@ -13,6 +13,13 @@ return require('packer').startup(function(use)
       require 'alpha'.setup(require 'alpha.themes.startify'.config)
     end
   }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
 
   -- apparence
   use 'marko-cerovac/material.nvim'
