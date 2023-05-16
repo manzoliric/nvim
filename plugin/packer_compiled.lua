@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/Users/richardmanzoli/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/richardmanzoli/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/richardmanzoli/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
